@@ -29,7 +29,7 @@ namespace Fundamentele_Programarii_1
         }
         private static void S2()
         {///Numărul de elemente dintr-o serie Collatz determinata de 2 numere
-            int a,b,k, aux, nr,max=-1,nmax=-1;
+            int a,b,k,aux,nr,max=-1,nmax=-1;
             string[] t = Console.ReadLine().Split(' ');
             a = int.Parse(t[0]);
             b = int.Parse(t[1]);
