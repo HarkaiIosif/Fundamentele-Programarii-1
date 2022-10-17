@@ -29,7 +29,7 @@ namespace Fundamentele_Programarii_1
         }
         private static void S2()
         {///Numărul de elemente dintr-o serie Collatz determinata de 2 numere
-            int a, b, k, aux, nr;
+            int a,b,k, aux, nr,max=-1,nmax=-1;
             string[] t = Console.ReadLine().Split(' ');
             a = int.Parse(t[0]);
             b = int.Parse(t[1]);
@@ -49,10 +49,17 @@ namespace Fundamentele_Programarii_1
                     if (aux % 2 == 0) aux = aux / 2;
                     else aux = 3 * aux + 1;
                 }
-                Console.WriteLine(nr);
-                Console.ReadKey();
+                if (nr > nmax)
+                {
+                    max = i;
+                    nmax = nr;
+                }
+                    
             }
+            Console.WriteLine(nmax+" "+max);
+            Console.ReadKey();
         }
+
         private static void S3()
         {///Numărul de elemente dintr-o serie Collatz
             int n = int.Parse(Console.ReadLine());
